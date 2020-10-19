@@ -1,19 +1,19 @@
 def pure_table(list,size):
-	table=[[] for i in range(3)]
-	for m in range(3):
-		for n in range(3):
+	table=[[] for i in range(size-2)]
+	for m in range(size-2):
+		for n in range(size-2):
 			sum=0
-			for i in range(m,size-2+m):
-				for j in range(n,size-2+n):
+			for i in range(m,3+m):
+				for j in range(n,3+n):
 					sum+=int(list[i][j])
-			table[m].append(sum/((size-2)**2))
+			table[m].append(sum/9)
 	return table
 
 def checkgrade(puretable):
 	a=True
 	b=True
-	for i in range(3):
-		for j in range(3):
+	for i in range(len(puretable)):
+		for j in range(len(puretable[i])):
 			if puretable[i][j]<85:
 				a=False
 			if puretable[i][j]<70:
@@ -58,7 +58,6 @@ def upgrade(list,grade,size):
 		return print(f"Output: Grade {grade.upper()}")
 
 	
-
 size=int(input("Material size: "))
 pure=[]
 for i in range(size):
