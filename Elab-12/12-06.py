@@ -17,3 +17,4 @@ for i in range(n):
 	for j in range(n):
 		print(matrix[i][j],end="")
 	print()
+ 
