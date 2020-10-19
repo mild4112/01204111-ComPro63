@@ -7,3 +7,4 @@ for i in file:
 	else: tmp[i["country"]].append(float(i["temperature"]))
 for i in tmp:
 	print(f"{i} {sum(tmp[i])/len(tmp[i]):.2f}")
+ 

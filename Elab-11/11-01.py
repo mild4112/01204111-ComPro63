@@ -4,3 +4,4 @@ with open(input("Enter File name: ")) as f:
 	for i in file:
 		if i["EU"]=="no" and i["coastline"]=="yes":
 			print(i["country"],i["population"])
+ 

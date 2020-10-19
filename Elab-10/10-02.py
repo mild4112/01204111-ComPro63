@@ -2,7 +2,7 @@ import json
 def openfile(file):
 	tmp=[json.loads(line) for line in open(file)]
 	return tmp
-
+ 
 def q1(data):
 	print(len(data))
 

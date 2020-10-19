@@ -2,7 +2,7 @@ import json
 def openjson(file):
 	with open(file) as f:
 		return json.loads(f.read())
-
+ 
 f=openjson(input("File name: "))
 number=int(input("input: "))
 

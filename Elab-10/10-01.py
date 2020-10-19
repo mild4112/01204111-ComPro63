@@ -1,5 +1,5 @@
 import json
-
+  
 def openfile(file):
 	with open(file) as f:
 		return json.loads(f.read())

@@ -17,3 +17,4 @@ print("Average temperature of countries having coastline, but not in EU:")
 for i in sorted(tmp):
 	print(f"{i} {sum(tmp[i])/len(tmp[i]):.2f}")
 
+ 

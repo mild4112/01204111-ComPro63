@@ -9,3 +9,4 @@ print(f"Minimum: {min(tmp):.2f}")
 print(f"Maximum: {max(tmp):.2f}")
 print(f"Average temperature: {sum(tmp)/len(tmp):.4f}")
 
+ 

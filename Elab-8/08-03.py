@@ -13,7 +13,7 @@ def q2(data):
 	for i in range(37):
 		sum=0
 		for j in range(1,len(data)):
-			sum += int(data[j][i])
+			sum += int(data[j][i]) 
 		tmp.append(sum)
 	print(data[0][tmp.index(max(tmp))])
 

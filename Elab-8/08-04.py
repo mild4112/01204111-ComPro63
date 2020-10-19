@@ -16,7 +16,7 @@ with open("matrix.txt","w") as f:
 
 def plus_matrix(A,B):
   result=[]
-  for i in range(len(A)):
+  for i in range(len(A)): 
     res=[]
     for j in range(len(A[0])):
       res.append(int(A[i][j])+int(B[i][j]))
