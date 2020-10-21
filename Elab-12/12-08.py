@@ -19,29 +19,19 @@ def reflection(direction,mirror):
 			return "right"
 
 def saitonmove(field,direction,x,y,count=0):
-	if field[y][x] == "\\" or field[y][x] == "/":
+	if x < 0 or y < 0 or x==len(field[0])-1 or y==len(field):
+		return count
+	if field[y][x] in ("\\","/"):
 		direction=reflection(direction,field[y][x])
 		count+=1
 	if direction == "up":
-		if y-1 == -1:
-			return count
-		else:
-			return saitonmove(field,direction,x,y-1,count)
+		return saitonmove(field,direction,x,y-1,count)
 	elif direction == "down":
-		if y+1 == len(field):
-			return count
-		else:
-			return saitonmove(field,direction,x,y+1,count)
+		return saitonmove(field,direction,x,y+1,count)
 	elif direction == "left":
-		if x-1 == -1:
-			return count
-		else:	
-			return saitonmove(field,direction,x-1,y,count)
+		return saitonmove(field,direction,x-1,y,count)
 	elif direction == "right":
-		if x+1 == len(field[0]):
-			return count
-		else:
-			return saitonmove(field,direction,x+1,y,count)
+		return saitonmove(field,direction,x+1,y,count)
 
 field=[]
 while True:
